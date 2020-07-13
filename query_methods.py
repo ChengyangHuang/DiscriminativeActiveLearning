@@ -11,8 +11,8 @@ import keras.backend as K
 from keras.losses import categorical_crossentropy
 from keras.layers import Lambda
 from keras import optimizers
-from cleverhans.attacks import FastGradientMethod, DeepFool
-from cleverhans.utils_keras import KerasModelWrapper
+# from cleverhans.attacks import FastGradientMethod, DeepFool
+# from cleverhans.utils_keras import KerasModelWrapper
 
 from models import *
 
