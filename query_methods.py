@@ -250,7 +250,7 @@ class DiscriminativeSampling(QueryMethod):
     def __init__(self, model, input_shape, num_labels, gpu):
         super().__init__(model, input_shape, num_labels, gpu)
 
-        self.sub_batches = 10
+        self.sub_batches = 1
 
     def query(self, X_train, Y_train, labeled_idx, amount):
 
@@ -289,7 +289,7 @@ class DiscriminativeRepresentationSampling(QueryMethod):
     def __init__(self, model, input_shape, num_labels, gpu):
         super().__init__(model, input_shape, num_labels, gpu)
 
-        self.sub_batches = 20
+        self.sub_batches = 1
 
 
     def query(self, X_train, Y_train, labeled_idx, amount):
@@ -334,7 +334,7 @@ class DiscriminativeAutoencoderSampling(QueryMethod):
     def __init__(self, model, input_shape, num_labels, gpu):
         super().__init__(model, input_shape, num_labels, gpu)
 
-        self.sub_batches = 10
+        self.sub_batches = 1
         self.autoencoder = None
         self.embedding = None
 
@@ -386,7 +386,7 @@ class DiscriminativeStochasticSampling(QueryMethod):
     def __init__(self, model, input_shape, num_labels, gpu):
         super().__init__(model, input_shape, num_labels, gpu)
 
-        self.sub_batches = 10
+        self.sub_batches = 1
         self.temperature = 0.01
 
     def query(self, X_train, Y_train, labeled_idx, amount):
